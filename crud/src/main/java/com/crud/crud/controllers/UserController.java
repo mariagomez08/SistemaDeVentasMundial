@@ -4,7 +4,6 @@ import com.crud.crud.models.UserModel;
 
 import com.crud.crud.services.UserService;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,12 +23,21 @@ public class UserController {
 
     @PostMapping
     public UserModel saveUsers(@RequestBody UserModel user){
+        if(user.getNombre().equals("") || user.getNombre() == null){
+            throw new RuntimeException("El nombre es requerido");
+        }
         return this.userService.saveUser(user);
 
     }
     @GetMapping(path ="/{id}")
     public Optional<UserModel> getByID(@PathVariable Long id){
-        return this.userService.getByID(id);
+        UserModel userModel= userService.getByID(id);
+
+        if(userModel == null){
+            return new UserController<>(
+
+            )
+        }
     }
 
     @PutMapping(path ="/{id}")
