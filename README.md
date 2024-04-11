@@ -15,31 +15,10 @@ Este proyecto utiliza Spring Boot 3.2.3 como plataforma para desarrollar una apl
 
 Este proyecto utiliza las siguientes dependencias:
 
-```xml
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
-```
+- `org.springframework.boot:spring-boot-starter-data-jpa`
+- `org.springframework.boot:spring-boot-starter-web`
+- `org.postgresql:postgresql` (con alcance de ejecución `runtime`)
+- `org.springframework.boot:spring-boot-starter-test` (con alcance de prueba `test`)
 
 ## Ejecución
 
